@@ -98,8 +98,8 @@ div#restaurant_filter {
   max-width: 100%;
 }
 
-/* My attempt at Media Query */
-@media only screen and (max-width: 600px) {
+/* Media Query for iPhone 12 Pro */
+@media only screen and (max-width: 428px) {
   body {
     text-align: center;
   }
@@ -113,11 +113,4 @@ div#restaurant_filter {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.violations-display {
-  /* Add your styling for the violations display here */
-}
 
