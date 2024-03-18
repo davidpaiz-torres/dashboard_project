@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Restaurant Inspection Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"> </script>
+</head>
+<body>
+<section>
+    <div class ="project_title" id="project_title">
+      <h1> Restaurant Report Card:</h1>
+    </div> 
+</section>
+<h2>NYC Establishments With Most Rodent Violations <br> </h2>
+  <div id="filters">
+    <div class="filter-container">
+      <label>Filter by Borough:</label>
+      <select id="borough">
+        <option value ="Default">Select</option>
+        <option value="Manhattan">Manhattan</option>
+        <option value="Brooklyn">Brooklyn</option>
+        <option value="Bronx">Bronx</option>
+        <option value="Queens">Queens</option>
+        <option value="Staten Island">Staten Island</option>
+      </select>
+    </div>
+  <div id="filters">
+      <div class="filter-container">
+        <label>Filter by Restaurant:</label>
+        <select id="restaurant">
+          <option value ="Default">Select</option>
+          <option value="SUBWAY">Subway</option>
+          <option value="DUNKIN DONUTS">Dunkin</option>
+          <option value="KENNEDY FRIED CHICKEN">Kennedy Fried Chicken</option>
+          <option value="Bluestone">Bluestone Lane</option>
+          <option value="POPEYES">Popeyes</option>
+          <option value="Laudree Soho">Laudree Soho</option>
+           <option value="Ihop">Ihop</option>
+        </select>
+   </div>
+</div>
+<div id="borough_filter">
+  <div class="item" borough="Manhattan">
+   <h2>Manhattan</h2>
+   <h3> Manhattan's Top Rodent Violators:</h3>
+      <p> 1. BLUESTONE LANE </p>
+      <p> 2. CRUMBL </p>
+      <p> 3. VAN LEEUWEN ICE CREAM </p>
+  </div>
+  <div class="item" borough="Brooklyn">  
+   <h2>Brooklyn</h2>  
+   <h3> Brooklyn's Top Rodent Violators:</h3>
+        <p> 1. SUBWAY </p>
+        <p> 2. TASTE OF CHINA </p>
+        <p> 3. STAND UP TEA </p>
+  </div>
+  <div class="item" borough="Bronx">  
+        <h2>The Bronx </h2>
+        <h3> The Bronx's Top Rodent Violators:</h3>
+        <p> 1. KENNEDY FRIED CHICKEN </p>
+        <p> 2. DUNKIN </p>
+        <p> 3. POPEYES </p>
+  </div>
+  <div class="item" borough="Queens">  
+        <h2>Queens</h2>
+        <h3> Queens' Top Rodent Violators:</h3>
+        <p> 1. SUBWAY </p>
+        <p> 2. YER MAN'S IRISH PUB </p>
+        <p> 3. PATMAR BAKE SHOP </p>
+  </div>
+  <div class="item" borough="Staten Island">  
+        <h2>Staten Island</h2>
+        <h3> Staten Island's Top Violators:</h3>
+        <p> 1.Subway </p>
+        <p> 2.STATUE OF LIBERTY DELI </p>
+        <p> 3.REYES DELI MEXICANA </p>
+  </div>
+</div>
+<div id="restaurant_filter">
+  <div class="item" restaurant="SUBWAY">  
+    <div class="SUBWAY"> <h1>Subway</h1> </div>
+    <div class="QU_Subway" id="QU_Subway"> <h3> Queens: <br> 5 Rodent Violations </h3> </div>
+    <div class="SI_Subway" id="SI_Subway"> <h3> Staten Island: <br> 3 Rodent Violations </h3> </div>
+    <div class="BK_Subway" id="BK_Subway"> <h3> Brooklyn: <br> 3 Rodent Violations </h3> </div>
+    <div class="MA_Subway" id="MA_Subway"> <h3> Manhattan: <br> 2 Rodent Violations </h3> </div>
+    <div class="BR_Subway" id="BR_Subway"> <h3> Bronx: <br> 1 Rodent Violation </h3> </div>
+  </div>
+  <div class="item" restaurant="DUNKIN DONUTS">
+    <div class="DUNKIN"> <h1>Dunkin Donuts</h1> </div>
+    <div class="BR_DUNKIN DONUTS" id="BR_DUNKIN DONUTS"> <h3> Bronx: <br> 3 Rodent Violations </h3> </div>
+    <div class="BK_DUNKIN DONUTS" id="BK_DUNKIN DONUTS"> <h3> Brooklyn: <br> 2 Rodent Violations </h3> </div>
+    <div class="QU_DUNKIN DONUTS" id="QU_DUNKIN DONUTS"> <h3> Queens: <br> 2 Rodent Violations </h3> </div>
+    <div class="SI_DUNKIN DONUTS" id="SI_DUNKIN DONUTS"> <h3> Staten Island: <br> 1 Rodent Violation </h3> </div>
+    <div class="MA_DUNKIN DONUTS" id="MA_DUNKIN DONUTS"> <h3> Manhattan: <br> 1 Rodent Violation </h3> </div>
+  </div>
+  <div class="item" restaurant="KENNEDY FRIED CHICKEN">  
+    <div class="KENNEDY FRIED CHICKEN"> <h1>KENNEDY FRIED CHICKEN</h1> </div>
+    <div class="BR_KENNEDY FRIED CHICKEN" id="BR_KENNEDY FRIED CHICKEN"> <h3> The Bronx: <br> 4 Rodent Violations </h3> </div>
+    <div class="QU_KENNEDY FRIED CHICKEN" id="QU_KENNEDY FRIED CHICKEN"> <h3> Queens: <br> 2 Rodent Violations </h3> </div>
+    <div class="BK_KENNEDY FRIED CHICKEN" id="BK_KENNEDY FRIED CHICKEN"> <h3> Brooklyn: <br> 1 Rodent Violation </h3> </div>
+  </div>
+  <div class="item" restaurant="Bluestone">  
+    <div class="Bluestone"> <h1>Bluestone Lane</h1> </div>
+    <div class="MA_Bluestone" id="MA_Bluestone"> <h3> Manhattan: <br> 4 Rodent Violations </h3> </div>
+  </div>
+  <div class="item" restaurant="POPEYES">  
+    <div class="POPEYES"> <h1>POPEYES</h1> </div>
+    <div class="BR_POPEYES" id="BR_POPEYES"> <h3> Bronx: <br> 2 Rodent Violations </h3> </div>
+    <div class="QU_POPEYES" id="QU_POPEYES"> <h3> Queens: <br> 1 Rodent Violation </h3> </div>
+  </div>
+  <div class="item" restaurant="Laudree Soho">  
+    <div class="Laudree Soho"> <h1>Laudree Soho</h1> <h3> 3 Rodent Violations </h3> </div>
+  </div>
+  <div class="item" restaurant="Ihop">  
+    <div class="Ihop"> <h1>Ihop</h1> </div>
+    <div class="QU_Ihop" id="QU_Ihop"> <h3> Queens: <br> 2 Rodent Violations </h3> </div>
+    <div class="BR_Ihop" id="BR_Ihop"> <h3> Bronx: <br> 1 Rodent Violation </h3> </div>
+  </div>
+    
+  
+</div>
+</body>
+</html>
+

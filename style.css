@@ -1,0 +1,110 @@
+body{
+  background-color: floralwhite;
+  margin:15px;
+  padding: 25px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+  text-align:center;
+  display:flex;
+  flex-direction: column;
+}
+
+.project_title{
+  text-align: center;
+}
+
+.project_title h1{
+ text-align: center;
+ border-bottom: inset 3px;
+ border-bottom-width: 0cap;
+ border-color: orangered;
+ color: darkblue;
+ border-radius: 3px;
+ padding-bottom: 15px;
+}
+
+.item {
+  margin: 5px 10px;
+  flex: 1 0 calc(22% - 20px); 
+  box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-top: solid 7.5px;
+  border-bottom:solid .5px;
+  border-color: orangered;
+  max-width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .item[borough="Manhattan"], .item[borough="Brooklyn"], .item[borough="Bronx"], .item[borough="Queens"], .item[borough="Staten Island"] {
+    background-color: floralwhite;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    margin-left:2px;
+    margin-right:2px;
+    padding: 5px;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+  }
+
+  .item[restaurant="SUBWAY"], .item[restaurant="DUNKIN DONUTS"], .item[restaurant="KENNEDY FRIED CHICKEN"], .item[restaurant="GOLDEN KRUST CARIBBEAN BAKERY & GRILL"], .item[restaurant="Bluestone"], .item[restaurant="POPEYES"],.item[restaurant="Laudree Soho"],  .item[restaurant="Ihop"] {
+    background-color: floralwhite;
+    text-align: center;
+    margin-left:2px;
+    margin-right:2px;
+    padding: 5px;
+    border-radius: 15px;
+    max-width: 100%;
+    display: none;
+  
+  }
+
+
+
+
+   
+  .item:hover{
+    box-shadow: 0 28px 16px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease; 
+  }
+  
+  div#borough_filter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+  }
+    
+  div#restaurant_filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 100%;
+  }
+  
+  
+/* My attempt at Media Query */
+@media only screen and (max-width: 600px)
+{
+   body{
+      text-align: center;
+   }
+   .parent-container {
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      text-align:center;
+  }
+
+}
