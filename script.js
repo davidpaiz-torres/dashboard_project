@@ -12,7 +12,8 @@ function filterByBorough() {
 
   // Show only the selected borough
   items.forEach(item => {
-    if (item.getAttribute('borough') === selectedBorough || selectedBorough === 'Default') {
+    const itemBorough = item.getAttribute('borough');
+    if (selectedBorough === 'Default' || itemBorough === selectedBorough) {
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
@@ -28,7 +29,7 @@ function filterByRestaurant() {
   // Show only the selected restaurant
   items.forEach(item => {
     const itemRestaurant = item.getAttribute('restaurant');
-    if (itemRestaurant === selectedRestaurant || selectedRestaurant === 'Default') {
+    if (selectedRestaurant === 'Default' || itemRestaurant === selectedRestaurant) {
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
@@ -36,11 +37,15 @@ function filterByRestaurant() {
   });
 }
 
-
 // Add event listeners for each filter
-boroughFilter.addEventListener('change', filterByBorough);
-restaurantFilter.addEventListener('change', filterByRestaurant);
+if (boroughFilter && restaurantFilter) {
+  boroughFilter.addEventListener('change', filterByBorough);
+  restaurantFilter.addEventListener('change', filterByRestaurant);
 
-// Call the filter functions initially to apply the initial filtering
-filterByBorough();
-filterByRestaurant();
+  // Call the filter functions initially to apply the initial filtering
+  document.addEventListener('DOMContentLoaded', () => {
+    filterByBorough();
+    filterByRestaurant();
+  });
+}
+
