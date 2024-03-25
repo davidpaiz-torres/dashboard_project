@@ -1,62 +1,127 @@
 body {
   background-color: floralwhite;
-  margin: 15px;
-  padding: 25px;
-  font-family: Arial, sans-serif;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
 
+.nunito-sans{
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
 }
 
 .project_title {
   text-align: center;
+  border-bottom: 3px solid darkred;
+  color: darkred;
+  padding-bottom: 15px;
+  
 }
 
-.project_title h1 {
+.dashboard-grid h1 {
   text-align: center;
-  border-bottom: inset 3px;
-  border-bottom-width: 0cap;
-  border-color: orangered;
-  color: darkblue;
-  border-radius: 3px;
+  border-bottom: 3px solid darkred;
+  color: darkred;
+  padding-bottom: 15px;
+  
+}
+
+h1{
+  text-align: center;
+  /* border-bottom: 3px solid darkred; */
+  color: darkred;
   padding-bottom: 15px;
 }
 
-.item {
-  margin: 5px 10px;
-  flex: 1 0 calc(22% - 20px);
-  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  box-sizing: border-box;
-  border: solid 1px;
-  border-top: solid 7.5px;
-  border-bottom: solid .5px;
-  border-color: orangered;
-  max-width: 100%;
-  display: block;
+h2{
+  color:darkred;
+}
+
+.hidden {
+  display: none;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+#filters {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-container {
+  margin-right: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.select {
+  padding: 5px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+
+
+.card {
+  background-color: white;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+  border-top: solid 7.5px darkred;
+  border-bottom: solid 0.5px darkred;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card h2,
+
+.card h3,
+.card p {
+  margin: 5px 0;
+}
+
+.item {
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item h2,
+.item h3,
+.item p {
+  margin: 5px;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
 }
 
 .item[borough="Manhattan"],
 .item[borough="Brooklyn"],
 .item[borough="Bronx"],
 .item[borough="Queens"],
-.item[borough="Staten Island"] {
-  background-color: floralwhite;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
+.item[borough="Staten Island"],
 .item[restaurant="SUBWAY"],
 .item[restaurant="DUNKIN DONUTS"],
 .item[restaurant="KENNEDY FRIED CHICKEN"],
@@ -65,52 +130,78 @@ body {
 .item[restaurant="Laudree Soho"],
 .item[restaurant="Ihop"] {
   background-color: floralwhite;
-  text-align: center;
-  margin-left: 2px;
-  margin-right: 2px;
-  padding: 5px;
+}
+
+#restaurant_filter {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.restaurant-card {
+  background-color: white;
   border-radius: 15px;
-  max-width: 100%;
-  display: none;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
 }
 
-.item:hover {
-  box-shadow: 0 28px 16px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+.restaurant-card h1 {
+  color: darkred;
+  margin-bottom: 10px;
 }
 
-div#borough_filter {
+.restaurant-card h3 {
+  margin: 5px 0;
+}
+
+
+/* Center the cards within the container */
+.dashboard-grid{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  max-width: 100%;
+  flex-wrap: wrap; /* Allow cards to wrap if needed */
 }
 
-div#restaurant_filter {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 100%;
+.card {
+  width: 350px; /* Adjust the width as needed */
+  height: auto; /* Let the height adjust based on content */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px; /* Adjust padding as needed */
+  text-align: center;
+  overflow: hidden; /* Prevent content overflow */
 }
 
-/* Media Query for iPhone 12 Pro */
-@media only screen and (max-width: 428px) {
-  body {
-    text-align: center;
+.card h2,
+.card h3,
+.card p {
+  margin: 5px;
+  word-wrap: break-word; /* Allow text wrapping */
+}
+
+section {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+section.visible {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  .parent-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  .card,
+  .restaurant-card {
+    padding: 15px;
   }
 }
-
-
