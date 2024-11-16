@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const boroughFilter = document.getElementById('borough');
   const restaurantFilter = document.getElementById('restaurant');
 
+  const hideRestuarant = document.getElementById('restaurant_filter')
+  hideRestuarant.style.display = 'none';
+  window.addEventListener('unload', (event) => {
+    return hideRestuarant})
+
+
+
   // Select the item elements
   const items = document.querySelectorAll('.item');
 
@@ -38,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemRestaurant = item.getAttribute('restaurant');
         if (itemRestaurant !== selectedRestaurant) {
           item.style.display = 'none';
+          hideRestuarant.style.display = "flex"; 
         }
       });
     }
